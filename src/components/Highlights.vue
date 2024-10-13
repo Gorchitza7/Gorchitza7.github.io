@@ -1,12 +1,14 @@
 <script setup>
 import { computed } from 'vue';
 import { getPressureMm, getTime } from '../utils'
+
 const props = defineProps({
   weatherInfo: {
     type: [Object, null],
     required: true,
   }
 })
+
 const timezone = computed(() => props.weatherInfo?.timezone)
 
 const sunriseTime = computed(() => {
